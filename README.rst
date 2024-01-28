@@ -1,3 +1,7 @@
+.. image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
+    :target: https://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :alt: License: AGPL-3
+
 Stock Picking From Invoice
 ==========================
 This Module Enables To Create Stocks Picking From Customer/Supplier Invoice
@@ -10,12 +14,14 @@ Company
 -------
 * `Cybrosys Techno Solutions <https://cybrosys.com/>`__
 
+License
+-------
+AFFERO General Public License, Version 3 (AGPL v3).
+(https://www.gnu.org/licenses/agpl-3.0-standalone.html)
+
 Credits
 -------
-* Developers: 	Saritha Sahadevan @cybrosys, odoo@cybrosys.com
-                Muhammed P V14 @cybrosys, odoo@cybrosys.com
-                Midilaj V K V15 @cybrosys, odoo@cybrosys.com
-                Vishnu kp V16 @cybrosys, odoo@cybrosys.com
+ Developer: (V17) Mohammed Dilshad Tk, Contact: odoo@cybrosys.com
 
 Contacts
 --------
@@ -30,9 +36,7 @@ Maintainer
 ==========
 .. image:: https://cybrosys.com/images/logo.png
    :target: https://cybrosys.com
-
 This module is maintained by Cybrosys Technologies.
-
 For support and more information, please visit `Our Website <https://cybrosys.com/>`__
 
 Further information
