@@ -21,7 +21,7 @@
 #############################################################################
 {
     'name': "Stock Picking From Invoice",
-    'version': '16.0.1.0.0',
+    'version': '15.0.1.0.0',
     'summary': """Stock Picking From Customer/Supplier Invoice""",
     'description': """This Module Enables To Create Stocks Picking From Customer/Supplier Invoice""",
     'author': "Cybrosys Techno Solutions",
@@ -35,6 +35,5 @@
     'license': 'AGPL-3',
     'installable': True,
     'auto_install': False,
-    'application': True,
-    'sequence':1
+    'application': False,
 }
