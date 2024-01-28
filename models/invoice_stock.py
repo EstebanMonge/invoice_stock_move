@@ -19,6 +19,7 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
+
 from odoo.exceptions import UserError
 from odoo import models, fields, api, _
 
@@ -28,7 +29,6 @@ class InvoiceStockMove(models.Model):
 
     def _get_stock_type_ids(self):
         data = self.env['stock.picking.type'].search([])
-
         if self._context.get('default_move_type') == 'out_invoice':
             for line in data:
                 if line.code == 'outgoing':
@@ -81,7 +81,6 @@ class InvoiceStockMove(models.Model):
                         'location_id': self.partner_id.property_stock_supplier.id,
                         'move_type': 'direct'
                     }
-
                 picking = self.env['stock.picking'].create(pick)
                 self.invoice_picking_id = picking.id
                 self.picking_count = len(picking)
@@ -107,7 +106,6 @@ class InvoiceStockMove(models.Model):
         ''' Reverse a recordset of account.move.
         If cancel parameter is true, the reconcilable or liquidity lines
         of each original move will be reconciled with its reverse's.
-
         :param default_values_list: A list of default values to consider per move.
                                     ('type' & 'reversed_entry_id' are computed in the method).
         :return:                    An account.move recordset, reverse of the current self.
@@ -146,7 +144,7 @@ class SupplierInvoiceLine(models.Model):
                     'price_unit': price_unit,
                     'picking_type_id': picking.picking_type_id.id,
                     'route_ids': 1 and [
-                        (6, 0, [x.id for x in self.env['stock.location.route'].search([('id', 'in', (2, 3))])])] or [],
+                        (6, 0, [x.id for x in self.env['stock.rule'].search([('id', 'in', (2, 3))])])] or [],
                     'warehouse_id': picking.picking_type_id.warehouse_id.id,
                 }
             if picking.picking_type_id.code == 'incoming':
@@ -162,7 +160,7 @@ class SupplierInvoiceLine(models.Model):
                     'price_unit': price_unit,
                     'picking_type_id': picking.picking_type_id.id,
                     'route_ids': 1 and [
-                        (6, 0, [x.id for x in self.env['stock.location.route'].search([('id', 'in', (2, 3))])])] or [],
+                        (6, 0, [x.id for x in self.env['stock.rule'].search([('id', 'in', (2, 3))])])] or [],
                     'warehouse_id': picking.picking_type_id.warehouse_id.id,
                 }
             diff_quantity = line.quantity

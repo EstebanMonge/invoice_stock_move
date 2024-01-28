@@ -15,6 +15,7 @@ Credits
 * Developers: 	Saritha Sahadevan @cybrosys, odoo@cybrosys.com
                 Muhammed P V14 @cybrosys, odoo@cybrosys.com
                 Midilaj V K V15 @cybrosys, odoo@cybrosys.com
+                Vishnu kp V16 @cybrosys, odoo@cybrosys.com
 
 Contacts
 --------
